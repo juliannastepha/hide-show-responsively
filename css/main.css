@@ -17,16 +17,25 @@ html {
 }
 
 body {
-  margin: 0;
+  text-align: center;
 }
 
 img {
   display: inline-block;
+  width: 100%;
+}
+
+img:nth-of-type(even) {
+  display: none;
 }
 
 @media only screen and (min-width: 25em) {
 
   img {
+    width: 49%;
+  }
+
+  img:nth-of-type(even) {
     display: inline-block;
   }
 
@@ -34,16 +43,24 @@ img {
 
 @media only screen and (min-width: 38em) {
 
+  body img:first-of-type {
+    display: none;
+  }
+
   img {
-    display: inline-block;
+    width: 32%;
   }
 
 }
 
 @media only screen and (min-width: 60em) {
 
-  img {
+  body img:first-of-type {
     display: inline-block;
+  }
+
+  img {
+    width: 24%;
   }
 
 }
